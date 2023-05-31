@@ -15,7 +15,7 @@ void Espresso::getDescription(void) const{
 }
 
 int Espresso::Cost(void){
-    return 5;
+    return 3;
 }
 
 

@@ -18,7 +18,7 @@ void Soy::getDescription(void) const{
 }
 
 int Soy::Cost(void){
-    return this->original_Object->Cost() + 25;
+    return this->original_Object->Cost() + 1000;
 }
 
 

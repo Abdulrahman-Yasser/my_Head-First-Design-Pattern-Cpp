@@ -14,7 +14,7 @@ void Decaff::getDescription(void) const{
 }
 
 int Decaff::Cost(void){
-    return 10;
+    return 2;
 }
 
 

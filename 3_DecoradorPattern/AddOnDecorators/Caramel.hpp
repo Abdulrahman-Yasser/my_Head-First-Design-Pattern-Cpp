@@ -19,7 +19,7 @@ void Caramel::getDescription(void) const{
 }
 
 int Caramel::Cost(void){
-    return this->original_Object->Cost() + 14;
+    return this->original_Object->Cost() + 10;
 }
 
 #endif

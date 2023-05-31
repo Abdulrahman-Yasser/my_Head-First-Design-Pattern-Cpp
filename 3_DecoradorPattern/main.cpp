@@ -36,4 +36,31 @@ int main(int argc, const char * argv[]) {
     DarkRoast_with_whip = std::make_unique<Mocha>(std::make_unique<HouseBlend>());
     DarkRoast_with_whip->getDescription();
     std::cout <<"\n" << DarkRoast_with_whip->Cost()<< std::endl;
+
+    Espresso *beveregee = new Espresso();
+    Mocha *espresso_with_mocha = new Mocha(beveregee);
+    espresso_with_mocha->getDescription();
+    std::cout <<"\n" << espresso_with_mocha->Cost()<< std::endl;
+
+
+    /*
+    we can add as we like of AddOnDecoradors, but only with one beverage
+    */
+    HouseBlend* HouseBlend_ptr = new HouseBlend();
+    Soy* Soy_ptr = new Soy(HouseBlend_ptr);
+    Caramel* Caramel_ptr = new Caramel(Soy_ptr);
+    Caramel_ptr->getDescription();
+    std::cout <<"\n" << Caramel_ptr->Cost()<< std::endl;
+
+
+    Espresso* Espresso_ptr = new Espresso();
+    Whip* Whip_ptr = new Whip(Espresso_ptr);
+    Mocha *Mocha_ptr = new Mocha(Whip_ptr);
+    Mocha_ptr->getDescription();
+    std::cout <<"\n" << Mocha_ptr->Cost()<< std::endl;
+
+    
+
+
+
 }

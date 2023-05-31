@@ -8,9 +8,16 @@ class Soy: public AddOnDecorador{
     Soy(std::unique_ptr<beverage> Original_Drink) : AddOnDecorador(std::move(Original_Drink)){
         
     }
+    Soy(beverage* q);
     void getDescription(void) const override;
     int Cost(void) override;
 };
+
+Soy::Soy(beverage* q) : AddOnDecorador(std::move(std::make_unique<Decaff>())){
+    std::unique_ptr<beverage> p(q);
+    this->original_Object = std::move(p);
+}
+
 
 void Soy::getDescription(void) const{
     this->original_Object->getDescription();

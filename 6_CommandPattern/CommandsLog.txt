@@ -1,0 +1,12 @@
+14LightCommandOn
+15LightCommandOff
+14LightCommandOn
+15LightCommandOff
+20GuarageDoorCommandUp
+22GuarageDoorCommandDown
+19CeilingFanCommandOn
+20CeilingFanCommandOff
+21SterioForCD_CommandOn
+22SterioForCD_CommandOff
+14MacroCommandOn
+15MacroCommandOff

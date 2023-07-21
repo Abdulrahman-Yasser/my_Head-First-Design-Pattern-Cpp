@@ -11,6 +11,7 @@
 #include <queue>
 
 class PizzaIngredientFactory{
+    public:
     virtual ~PizzaIngredientFactory(){
 
     }

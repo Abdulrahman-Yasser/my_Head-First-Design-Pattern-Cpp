@@ -14,7 +14,7 @@
 #include <queue>
 
 class Pizza {
-    private:
+    protected:
         std::string name;
         Dough *dough;
         Sauce *sauce;
@@ -22,17 +22,48 @@ class Pizza {
         Cheese *cheese;
         Pepperoni *pepperoni;
         Clams *clam;
-
-        virtual void prepare() = 0;
     public:
+        virtual ~Pizza() = default;
+        Pizza():dough( nullptr), sauce (nullptr), cheese (nullptr),
+                pepperoni (nullptr), clam (nullptr), my_veggies(){
+
+        }
+        virtual void prepare() = 0;
         void bake() {
-            std::cout << ("Bake for 25 minutes at 350");
+            if(dough){
+                dough->get_it();
+                std::cout << "\n";
+            }
+            if(sauce){
+                sauce->get_it();
+                std::cout << "\n";
+            }
+            if(cheese){
+                cheese->get_it();
+                std::cout << "\n";
+            }
+            if(pepperoni){
+                pepperoni->get_it();
+                std::cout << "\n";
+            }
+            if(clam){
+                clam->get_it();
+                std::cout << "\n";
+            }
+            if(my_veggies.size()){
+                while(my_veggies.size() > 0){
+                    my_veggies.front()->get_it();
+                    my_veggies.pop();
+                }
+                std::cout << "\n";
+            }
+            std::cout << ("Bake for 25 minutes at 350\n");
         }
         void cut() {
-        std::cout << ("Cutting the pizza into diagonal slices");
+        std::cout << ("Cutting the pizza into diagonal slices\n");
         }
         void box() {
-        std::cout << ("Place pizza in official PizzaStore box");
+        std::cout << ("Place pizza in official PizzaStore box\n");
         }
         void setName(std::string name) {
             this->name = name;

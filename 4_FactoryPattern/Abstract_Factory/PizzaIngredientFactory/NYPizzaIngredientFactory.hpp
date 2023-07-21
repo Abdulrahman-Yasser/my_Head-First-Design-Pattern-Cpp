@@ -16,6 +16,7 @@
 
 
 class NYPizzaIngredientFactory: public PizzaIngredientFactory{
+    public:
     Dough *createDough() override{
         return(new ThinCrustDough());
     }
@@ -26,7 +27,7 @@ class NYPizzaIngredientFactory: public PizzaIngredientFactory{
         return(new ReggianoCheese());
     }
     std::queue<Veggies*> createVeggies() override{
-        std::queue<Veggies*> my_Veggiest;
+        std::queue<Veggies*> my_Veggiest ;
         my_Veggiest.push(new Garlic());
         my_Veggiest.push(new Onion());
         my_Veggiest.push(new Mashroum());
